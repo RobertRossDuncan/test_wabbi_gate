@@ -1,6 +1,6 @@
 name: Test Wabbi Gate Pass
 
-on: pull_request
+on: [pull_request]
 
 jobs:
   pull_request_job:
