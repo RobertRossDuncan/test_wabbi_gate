@@ -1,0 +1,21 @@
+name: Test Wabbi Gate Pass
+
+on: [pull_request]
+
+jobs:
+  pull_request_job:
+    runs-on: ubuntu-latest
+    name: Verify Wabbi Gate Pass
+    steps:
+      - name: verify wabbi gate status is pass
+        id: process_pr
+        uses: RobertRossDuncan/verify-wabbi-gate-pass@main
+        with:
+          wabbiHost: https://qa.wabbi.io
+          wabbiProjectId: 1
+          jiraPrefixes: AR,HYD,HDV,JU,RB,SJS,STP
+          wabbiGateId: 13
+          wabbiGateToken: ${{ secrets.GATE_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Display wabbi gate status
+        run: echo "pr process status ${{ steps.process_pr.outputs.status }}"
