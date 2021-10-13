@@ -13,8 +13,8 @@ jobs:
         with:
           wabbiHost: https://qa.wabbi.io
           wabbiProjectId: 1
-          jiraPrefixes: AR,HYD,HDV,JU,RB,SJS,STP
-          wabbiGateId: 13
+          jiraPrefixes: AB,AC,AD
+          wabbiGateId: 14
           wabbiGateToken: ${{ secrets.GATE_TOKEN }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Display wabbi gate status
