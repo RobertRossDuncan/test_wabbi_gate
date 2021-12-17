@@ -13,7 +13,7 @@ jobs:
         with:
           wabbiHost: https://qa.wabbi.io
           wabbiProjectId: 1
-          jiraPrefixes: AB,AC,AD
+          issuePrefixes: AB,AC,AD
           wabbiGateId: 14
           wabbiGateToken: ${{ secrets.GATE_TOKEN }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
