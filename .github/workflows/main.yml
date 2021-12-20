@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: verify wabbi gate status is pass
         id: process_pr
-        uses: hiwabbi/wabbi-gate-by-issues@v0.5.2
+        uses: hiwabbi/wabbi-gate-by-issues@v0.5.5
         with:
           wabbiHost: https://qa.wabbi.io
           wabbiProjectId: 1
